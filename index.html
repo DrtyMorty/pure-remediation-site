@@ -363,7 +363,22 @@ main section { padding: 96px 32px; }
 
 /* reviews */
 .rev-band { background: var(--card); border-block: 1px solid var(--mist); }
-.rev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.rev-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+.rev-sticky { position: sticky; top: 110px; }
+.rev-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.rev-card {
+  background: var(--paper); border: 1px solid var(--mist); border-radius: var(--r);
+  padding: 22px; display: flex; flex-direction: column; gap: 12px;
+}
+.rev-card .stars-sm { color: #F0A31A; font-size: .85rem; letter-spacing: 2px; }
+.rev-card blockquote { font-size: .86rem; color: var(--ink); line-height: 1.65; border: none; }
+.rev-card .attr { margin-top: auto; display: flex; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px dashed var(--mist); }
+.rev-card .av {
+  width: 34px; height: 34px; border-radius: 50%; background: var(--hydro-light);
+  display: grid; place-items: center; font-weight: 800; font-size: .74rem; color: var(--hydro); flex-shrink: 0;
+}
+.rev-card .who b { display: block; font-size: .8rem; font-weight: 700; }
+.rev-card .who span { font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; color: var(--faint); text-transform: uppercase; }
 .rev-score { display: flex; align-items: baseline; gap: 16px; }
 .rev-score .num { font-family: var(--mono); font-size: 5.4rem; font-weight: 600; letter-spacing: -0.05em; line-height: 1; }
 .rev-stars { color: #F0A31A; font-size: 1.5rem; letter-spacing: 3px; }
@@ -493,6 +508,8 @@ footer.site {
   .stat { border-left: none; border-top: 1px dashed rgba(255,255,255,.14); }
   .stat:nth-child(-n+2) { border-top: none; }
   .ba-grid, .rev-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .rev-sticky { position: static; }
+  .rev-cards { grid-template-columns: 1fr; }
   .res-grid { grid-template-columns: 1fr 1fr; }
   .foot-grid { grid-template-columns: 1fr; gap: 36px; }
   main section { padding: 68px 24px; }
@@ -835,31 +852,39 @@ footer.site {
 <!-- REVIEWS -->
 <section id="reviews" class="rev-band">
   <div class="wrap rev-grid">
-    <div class="rv">
+    <div class="rv rev-sticky">
       <p class="eyebrow">Reputation</p>
       <div class="rev-score" style="margin-top:14px">
         <span class="num" data-count="4.6" data-dec="1">0</span>
         <span class="rev-stars" aria-label="4.6 out of 5 stars">★★★★★</span>
       </div>
-      <p class="rev-meta">9 verified reviews from Houston homeowners on Google — read every one of them, unedited, straight from the source.</p>
+      <p class="rev-meta">9 reviews from Houston homeowners on Google. The ones here are shown word-for-word — click through and check.</p>
       <a class="g-link" href="https://www.google.com/maps/search/?api=1&query=Pure+Remediation+Houston&query_place_id=ChIJjXKwCtXdQIYRyuS9OLwxnL4" target="_blank" rel="noopener">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        Read the reviews on Google
+        Read all reviews on Google
       </a>
     </div>
-    <div class="rev-facts rv rv-1">
-      <div class="fact">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><b>Licensed &amp; insured in Texas</b><span>Verify any contractor at tdlr.texas.gov before you hire</span></div>
-      </div>
-      <div class="fact">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><b>A real person, around the clock</b><span>Emergencies don't queue — neither do we</span></div>
-      </div>
-      <div class="fact">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><b>Everything in writing</b><span>Moisture logs, photos, and clearance reports — you keep the file</span></div>
-      </div>
+    <div class="rev-cards rv rv-1">
+      <article class="rev-card">
+        <div class="stars-sm" aria-label="5 stars">★★★★★</div>
+        <blockquote>"Justin is extremely knowledgeable, and a legitimate expert in mold remediation. He provided options and gave exceptional insight into my mold challenges and kept me informed throughout my entire remediation. I am a 100% satisfied customer! I wish I could give more than 5 stars!"</blockquote>
+        <div class="attr"><span class="av">TD</span><span class="who"><b>Tarryl Daniels</b><span>Google review</span></span></div>
+      </article>
+      <article class="rev-card">
+        <div class="stars-sm" aria-label="5 stars">★★★★★</div>
+        <blockquote>"He helped me navigate through the complex world of mold remediation and my first homeowners insurance claim. He was super responsive to all of my needs and kept all of his promises which made the highly stressful situation that much better. I wish all contractors came through on their promises like this."</blockquote>
+        <div class="attr"><span class="av">BC</span><span class="who"><b>Brandon Cook</b><span>Google review</span></span></div>
+      </article>
+      <article class="rev-card">
+        <div class="stars-sm" aria-label="5 stars">★★★★★</div>
+        <blockquote>"Justin was very kind and patient. He took the time to explain the process and made me feel comfortable with the remediation. I highly recommend this company for your mold remediation needs."</blockquote>
+        <div class="attr"><span class="av">JS</span><span class="who"><b>John S</b><span>Google review</span></span></div>
+      </article>
+      <article class="rev-card">
+        <div class="stars-sm" aria-label="5 stars">★★★★★</div>
+        <blockquote>"Professional friendly service. Made us feel comfortable by explaining all our options while keeping us informed through the whole process! I had lots of questions 🤣."</blockquote>
+        <div class="attr"><span class="av">JL</span><span class="who"><b>Jack Le</b><span>Google review</span></span></div>
+      </article>
     </div>
   </div>
 </section>
