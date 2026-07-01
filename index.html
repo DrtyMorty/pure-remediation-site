@@ -94,10 +94,23 @@ nav {
 .nav-cta:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
 
 /* HERO */
+.hero-wrap { background: var(--surface); position: relative; overflow: hidden; }
+.hero-wrap::before {
+  content: ''; position: absolute; top: -220px; right: -160px;
+  width: 640px; height: 640px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,123,209,.14) 0%, rgba(14,123,209,0) 65%);
+  pointer-events: none;
+}
+.hero-wrap::after {
+  content: ''; position: absolute; bottom: -260px; left: -200px;
+  width: 560px; height: 560px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(13,158,110,.10) 0%, rgba(13,158,110,0) 65%);
+  pointer-events: none;
+}
 #hero {
-  background: var(--surface); padding: 80px 40px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-  max-width: 1200px; margin: 0 auto;
+  padding: 96px 40px;
+  display: grid; grid-template-columns: 1.05fr .95fr; gap: 60px; align-items: center;
+  max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
@@ -106,19 +119,23 @@ nav {
   letter-spacing: .08em; text-transform: uppercase; padding: 6px 14px; border-radius: 99px; margin-bottom: 20px;
 }
 .hero-heading {
-  font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; color: var(--text); margin-bottom: 20px;
+  font-family: var(--font-display); font-size: clamp(2.4rem, 5.2vw, 4rem);
+  font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: var(--text); margin-bottom: 22px;
 }
-.hero-heading em { font-style: normal; color: var(--accent); }
+.hero-heading em {
+  font-style: normal;
+  background: linear-gradient(120deg, #0e7bd1 0%, #0aa8c4 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 .hero-sub { font-size: 1.05rem; color: var(--text2); line-height: 1.65; margin-bottom: 32px; max-width: 480px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-primary {
-  background: var(--accent); color: #fff; font-weight: 700; font-size: .95rem;
-  padding: 14px 28px; border-radius: 99px; display: inline-flex; align-items: center; gap: 8px;
-  transition: background .15s, transform .15s, box-shadow .15s;
-  box-shadow: 0 4px 14px rgba(14,123,209,.35);
+  background: linear-gradient(120deg, #0e7bd1 0%, #0a97c9 100%); color: #fff; font-weight: 700; font-size: .95rem;
+  padding: 15px 30px; border-radius: 99px; display: inline-flex; align-items: center; gap: 8px;
+  transition: filter .15s, transform .15s, box-shadow .15s;
+  box-shadow: 0 6px 20px rgba(14,123,209,.35);
 }
-.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,123,209,.4); }
+.btn-primary:hover { filter: brightness(1.08); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(14,123,209,.45); }
 .btn-secondary {
   background: var(--surface); color: var(--text); font-weight: 600; font-size: .95rem;
   padding: 14px 28px; border-radius: 99px; border: 1.5px solid var(--border);
@@ -135,11 +152,19 @@ nav {
   background: var(--surface); border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg); border: 1px solid var(--border); overflow: hidden;
 }
+.hero-card { transform: rotate(1.5deg); transition: transform .4s var(--ease-out); }
+.hero-visual:hover .hero-card { transform: rotate(0deg) scale(1.01); }
 .hero-card-img {
   height: 260px;
-  background: linear-gradient(135deg, #0b1828 0%, #1a3a5c 50%, #0e7bd1 100%);
-  display: flex; align-items: center; justify-content: center; position: relative;
+  background: linear-gradient(135deg, #0b1828 0%, #14395e 45%, #0e7bd1 100%);
+  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
 }
+.hero-card-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 70% 20%, rgba(255,255,255,.15) 0%, transparent 50%);
+}
+.hero-card-icon { animation: float-drop 4s ease-in-out infinite; }
+@keyframes float-drop { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 .hero-card-badge {
   position: absolute; top: 16px; right: 16px;
   background: rgba(255,255,255,.12); backdrop-filter: blur(8px);
@@ -177,19 +202,28 @@ nav {
   padding: 5px 14px; border-radius: 99px; margin-bottom: 14px;
 }
 .section-title {
-  font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.4rem);
-  font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; color: var(--text); margin-bottom: 14px;
+  font-family: var(--font-display); font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; color: var(--text); margin-bottom: 14px;
 }
 .section-sub { font-size: 1rem; color: var(--text2); max-width: 540px; margin: 0 auto; line-height: 1.65; }
 
-/* STATS */
-.stats-row {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
-  background: var(--border); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-sm);
+/* STATS — dark statement band */
+.stats-band {
+  background: linear-gradient(135deg, #0b1828 0%, #10263f 60%, #0d3556 100%);
+  border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-lg);
+  position: relative;
 }
-.stat-block { background: var(--surface); padding: 40px 24px; text-align: center; }
-.stat-num { font-family: var(--font-display); font-size: 2.6rem; font-weight: 800; letter-spacing: -0.04em; color: var(--accent); line-height: 1; }
-.stat-label { font-size: .82rem; font-weight: 600; color: var(--text2); margin-top: 6px; }
+.stats-band::before {
+  content: ''; position: absolute; top: -140px; right: -80px;
+  width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,123,209,.35) 0%, rgba(14,123,209,0) 70%);
+  pointer-events: none;
+}
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; z-index: 1; }
+.stat-block { padding: 48px 24px; text-align: center; }
+.stat-block + .stat-block { border-left: 1px solid rgba(255,255,255,.08); }
+.stat-num { font-family: var(--font-display); font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; color: #fff; line-height: 1; }
+.stat-label { font-size: .82rem; font-weight: 600; color: rgba(255,255,255,.55); margin-top: 8px; letter-spacing: .02em; }
 
 /* SERVICES */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -197,10 +231,19 @@ nav {
   background: var(--surface); border-radius: var(--r-lg); padding: 32px 28px;
   border: 1px solid var(--border); box-shadow: var(--shadow-sm);
   transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), border-color .25s;
+  position: relative; overflow: hidden;
 }
-.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(14,123,209,.2); }
-.service-icon { width: 52px; height: 52px; background: var(--accent-light); border-radius: var(--r); display: grid; place-items: center; margin-bottom: 20px; }
-.service-icon svg { width: 26px; height: 26px; color: var(--accent); }
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #0e7bd1, #0aa8c4);
+  transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease-out);
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(14,123,209,.25); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover .service-icon { background: linear-gradient(135deg, #0e7bd1, #0aa8c4); }
+.service-card:hover .service-icon svg { color: #fff; }
+.service-icon { width: 52px; height: 52px; background: var(--accent-light); border-radius: var(--r); display: grid; place-items: center; margin-bottom: 20px; transition: background .25s; }
+.service-icon svg { width: 26px; height: 26px; color: var(--accent); transition: color .25s; }
 .service-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 10px; }
 .service-desc { font-size: .875rem; color: var(--text2); line-height: 1.6; }
 .service-tag { display: inline-block; margin-top: 14px; font-size: .72rem; font-weight: 700; color: var(--accent); background: var(--accent-light); padding: 3px 10px; border-radius: 99px; }
@@ -478,7 +521,7 @@ footer { background: var(--text); color: rgba(255,255,255,.6); padding: 48px 40p
 </nav>
 
 <!-- HERO -->
-<div style="background:var(--surface)">
+<div class="hero-wrap">
 <div id="hero">
   <div>
     <div class="hero-eyebrow reveal">⚡ Houston, TX — Water Damage Specialists</div>
@@ -553,7 +596,8 @@ footer { background: var(--text); color: rgba(255,255,255,.6); padding: 48px 40p
 <!-- STATS -->
 <div class="section-full">
   <div class="section-inner">
-    <div class="stats-row reveal">
+    <div class="stats-band reveal">
+    <div class="stats-row">
       <div class="stat-block">
         <div class="stat-num" data-target="45">0</div>
         <div class="stat-label">Min Avg. Response</div>
@@ -567,9 +611,10 @@ footer { background: var(--text); color: rgba(255,255,255,.6); padding: 48px 40p
         <div class="stat-label">Hour Availability</div>
       </div>
       <div class="stat-block">
-        <div class="stat-num" data-target="4" data-decimal="1">0</div>
-        <div class="stat-label">.6★ Google Rating</div>
+        <div class="stat-num" data-target="4.6" data-decimal="1">0</div>
+        <div class="stat-label">★ Google Rating</div>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -847,7 +892,7 @@ footer { background: var(--text); color: rgba(255,255,255,.6); padding: 48px 40p
     <div class="map-row">
       <div class="map-frame reveal">
         <iframe
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=place_id:ChIJjXKwCtXdQIYRyuS9OLwxnL4"
+          src="https://maps.google.com/maps?q=29.7010858,-95.5803217&z=13&output=embed"
           allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Pure Remediation location">
         </iframe>
