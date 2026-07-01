@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pure Remediation — Water Damage & Mold Removal · Houston, TX</title>
+<meta name="description" content="Pure Remediation — Houston's emergency water damage, mold removal, and restoration specialists. 24/7 response. Residential & commercial. Call (713) 202-4815."/>
+<meta name="keywords" content="water damage Houston TX, mold removal Houston, flood cleanup Houston, restoration company Houston, emergency water damage repair"/>
+<meta property="og:title" content="Pure Remediation — Houston Water Damage & Mold Removal"/>
+<meta property="og:description" content="24/7 emergency response. Water damage, mold, and restoration specialists serving Houston TX."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --void:#06090c;
+  --dark:#0b0f14;
+  --steel:#131c27;
+  --steel-2:#1a2535;
+  --teal:#0ea5e9;
+  --teal-dim:#0284c7;
+  --teal-glow:rgba(14,165,233,.12);
+  --teal-line:rgba(14,165,233,.25);
+  --white:#eef2f7;
+  --muted:#8294a8;
+  --faint:#3d4f63;
+  --line:rgba(238,242,247,.07);
+  --line-strong:rgba(238,242,247,.14);
+  --red:#ef4444;
+  --red-glow:rgba(239,68,68,.15);
+  --cond:"Barlow Condensed",sans-serif;
+  --body:"Inter",-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--dark);
+  color:var(--white);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--teal);color:#000}
+
+/* GRAIN TEXTURE */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+
+/* ═══════════════════════════════════ NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 0;
+  background:rgba(6,9,12,.85);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  transition:padding .3s;
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:1280px;margin:0 auto;padding:0 32px;
+}
+.logo{
+  font-family:var(--cond);font-weight:800;font-size:1.35rem;
+  letter-spacing:.06em;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;
+}
+.logo-mark{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--teal);display:flex;align-items:center;justify-content:center;
+}
+.logo-mark svg{width:18px;height:18px;fill:none;stroke:#000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.nav-cta{
+  display:flex;align-items:center;gap:24px;
+}
+.nav-phone{
+  font-family:var(--cond);font-weight:700;font-size:1.1rem;
+  letter-spacing:.05em;color:var(--teal);
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--cond);font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  font-size:.8rem;border-radius:4px;cursor:pointer;transition:all .2s;border:none;
+}
+.btn-primary{
+  background:var(--teal);color:#000;padding:10px 24px;
+}
+.btn-primary:hover{background:#38bdf8;transform:translateY(-1px)}
+.btn-ghost{
+  background:transparent;color:var(--white);padding:10px 20px;
+  border:1px solid var(--line-strong);
+}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+
+/* ═══════════════════════════════════ HERO */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-bottom:80px;
+  position:relative;overflow:hidden;
+}
+/* diagonal split background */
+.hero-bg{
+  position:absolute;inset:0;
+}
+.hero-bg-left{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg, #020508 0%, #0a141f 60%,transparent 100%);
+}
+.hero-bg-right{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 40%,rgba(14,165,233,.08) 0%,transparent 65%);
+}
+/* animated water ripple */
+.hero-ripple{
+  position:absolute;top:20%;right:10%;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(14,165,233,.06) 0%,transparent 70%);
+  animation:pulse 6s ease-in-out infinite;
+}
+.hero-ripple-2{
+  position:absolute;bottom:10%;right:25%;
+  width:300px;height:300px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(14,165,233,.04) 0%,transparent 70%);
+  animation:pulse 8s ease-in-out infinite reverse;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:.6}
+  50%{transform:scale(1.15);opacity:1}
+}
+/* diagonal divider line */
+.hero-line{
+  position:absolute;
+  top:0;bottom:0;left:55%;
+  width:1px;
+  background:linear-gradient(to bottom,transparent 0%,var(--teal-line) 30%,var(--teal-line) 70%,transparent 100%);
+  transform:skewX(-8deg);
+  transform-origin:top;
+}
+/* 24/7 badge top right */
+.hero-badge{
+  position:absolute;top:120px;right:40px;
+  background:var(--red-glow);
+  border:1px solid rgba(239,68,68,.3);
+  border-radius:8px;
+  padding:12px 20px;
+  text-align:center;
+}
+.hero-badge .badge-num{
+  font-family:var(--cond);font-weight:900;font-size:2rem;
+  color:var(--red);line-height:1;letter-spacing:-.02em;
+}
+.hero-badge .badge-label{
+  font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--muted);margin-top:4px;
+}
+
+.hero-content{position:relative;z-index:1;}
+.hero-tag{
+  font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--teal);font-weight:500;display:flex;align-items:center;gap:10px;
+  margin-bottom:24px;
+}
+.hero-tag::before{content:"";width:28px;height:1px;background:var(--teal)}
+.hero h1{
+  font-family:var(--cond);font-weight:900;
+  font-size:clamp(4rem,10vw,9.5rem);
+  line-height:.92;letter-spacing:-.01em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.hero h1 span{
+  display:block;color:var(--teal);
+  text-shadow:0 0 80px rgba(14,165,233,.4);
+}
+.hero h1 em{
+  display:block;font-style:normal;
+  color:rgba(238,242,247,.15);
+  font-size:clamp(2.5rem,6vw,5.5rem);
+  letter-spacing:.04em;
+}
+.hero-sub{
+  max-width:420px;
+  font-size:1rem;color:var(--muted);line-height:1.7;
+  margin-bottom:40px;margin-top:28px;
+}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.btn-emergency{
+  display:inline-flex;align-items:center;gap:12px;
+  background:var(--teal);color:#000;
+  font-family:var(--cond);font-weight:800;font-size:1rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:16px 32px;border-radius:4px;
+  transition:all .2s;
+}
+.btn-emergency:hover{background:#38bdf8;transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(14,165,233,.5)}
+.btn-emergency svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.hero-stat-row{
+  display:flex;align-items:center;gap:32px;margin-top:48px;
+  padding-top:48px;border-top:1px solid var(--line);
+}
+.h-stat{text-align:left}
+.h-stat-num{
+  font-family:var(--cond);font-weight:800;font-size:2.2rem;
+  color:var(--white);letter-spacing:-.02em;line-height:1;
+}
+.h-stat-num span{color:var(--teal)}
+.h-stat-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.h-stat-divider{width:1px;height:40px;background:var(--line-strong)}
+
+/* ═══════════════════════════════════ TRUST BAR */
+.trust-bar{
+  background:var(--steel);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+}
+.trust-bar-inner{
+  display:flex;align-items:center;justify-content:center;gap:0;
+  flex-wrap:wrap;
+}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 32px;
+  border-right:1px solid var(--line-strong);
+  font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;
+}
+.trust-item:last-child{border-right:none}
+.trust-item svg{
+  width:16px;height:16px;stroke:var(--teal);fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+  flex-shrink:0;
+}
+
+/* ═══════════════════════════════════ SERVICES */
+.section{padding:100px 0}
+.section-label{
+  font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--teal);font-weight:500;
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.section-label::before{content:"";width:24px;height:1px;background:var(--teal)}
+.section-title{
+  font-family:var(--cond);font-weight:800;
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  text-transform:uppercase;line-height:.95;letter-spacing:-.01em;
+  margin-bottom:16px;
+}
+.section-sub{
+  font-size:.95rem;color:var(--muted);max-width:480px;line-height:1.75;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  margin-top:60px;
+}
+.service-card{
+  background:var(--void);
+  padding:40px 36px;
+  position:relative;overflow:hidden;
+  transition:background .25s;
+}
+.service-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--teal);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s;
+}
+.service-card:hover{background:var(--steel)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{
+  width:44px;height:44px;border-radius:8px;
+  background:var(--teal-glow);border:1px solid var(--teal-line);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:24px;
+}
+.service-icon svg{
+  width:22px;height:22px;stroke:var(--teal);fill:none;
+  stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;
+}
+.service-num{
+  position:absolute;top:32px;right:32px;
+  font-family:var(--cond);font-weight:900;font-size:4rem;
+  color:rgba(238,242,247,.04);line-height:1;pointer-events:none;
+  letter-spacing:-.04em;
+}
+.service-name{
+  font-family:var(--cond);font-weight:700;font-size:1.4rem;
+  text-transform:uppercase;letter-spacing:.03em;margin-bottom:12px;
+}
+.service-desc{
+  font-size:.88rem;color:var(--muted);line-height:1.7;
+}
+.service-tag{
+  display:inline-flex;margin-top:20px;
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--teal);font-weight:600;
+  align-items:center;gap:6px;
+}
+.service-tag::after{content:"→"}
+
+/* ═══════════════════════════════════ SPLIT SECTION (before/after) */
+.split{
+  padding:100px 0;
+  background:var(--void);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.split-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+}
+.split-panel{padding:64px 56px;position:relative}
+.split-panel-left{background:var(--steel-2)}
+.split-panel-right{background:var(--steel);border-left:1px solid var(--teal-line)}
+.split-panel-right::before{
+  content:"";position:absolute;top:0;left:0;bottom:0;width:2px;
+  background:linear-gradient(to bottom,transparent,var(--teal),transparent);
+}
+.split-eyebrow{
+  font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+  margin-bottom:20px;font-weight:500;
+}
+.split-eyebrow.before{color:var(--faint)}
+.split-eyebrow.after{color:var(--teal)}
+.split-heading{
+  font-family:var(--cond);font-weight:800;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  text-transform:uppercase;line-height:1;letter-spacing:-.01em;
+  margin-bottom:24px;
+}
+.split-panel-left .split-heading{color:rgba(238,242,247,.4)}
+.split-panel-right .split-heading{color:var(--white)}
+.problem-list,.solution-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.problem-list li,.solution-list li{
+  display:flex;gap:14px;align-items:flex-start;
+  font-size:.9rem;line-height:1.5;
+}
+.problem-list li{color:var(--faint)}
+.solution-list li{color:var(--white)}
+.problem-list li::before{
+  content:"✕";color:var(--faint);flex-shrink:0;
+  font-weight:600;margin-top:1px;
+}
+.solution-list li::before{
+  content:"✓";color:var(--teal);flex-shrink:0;
+  font-weight:700;margin-top:1px;
+}
+
+/* ═══════════════════════════════════ PROCESS */
+.process{padding:100px 0}
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  margin-top:60px;
+}
+.step{
+  background:var(--void);
+  padding:48px 36px;
+  position:relative;
+  transition:background .25s;
+}
+.step:hover{background:var(--steel)}
+.step-num{
+  font-family:var(--cond);font-weight:900;
+  font-size:5.5rem;line-height:1;
+  color:rgba(14,165,233,.1);
+  letter-spacing:-.04em;
+  margin-bottom:16px;
+  transition:color .25s;
+}
+.step:hover .step-num{color:rgba(14,165,233,.25)}
+.step-title{
+  font-family:var(--cond);font-weight:700;
+  font-size:1.2rem;text-transform:uppercase;letter-spacing:.04em;
+  margin-bottom:12px;
+}
+.step-desc{font-size:.85rem;color:var(--muted);line-height:1.7}
+.step-connector{
+  position:absolute;top:48px;right:-1px;
+  width:1px;height:40px;
+  background:linear-gradient(to bottom,transparent,var(--teal-line),transparent);
+  display:none;
+}
+
+/* ═══════════════════════════════════ SOCIAL PROOF */
+.proof{
+  padding:100px 0;
+  background:var(--void);
+  border-top:1px solid var(--line);
+}
+.proof-stars{
+  display:flex;gap:4px;margin-bottom:6px;
+}
+.star{color:var(--teal);font-size:1rem}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  margin-top:60px;
+}
+.review-card{
+  background:var(--void);
+  padding:40px 36px;
+  transition:background .25s;
+}
+.review-card:hover{background:var(--steel)}
+.review-text{
+  font-size:.92rem;color:var(--muted);line-height:1.75;
+  font-style:italic;margin-bottom:24px;
+}
+.review-text::before{content:""";font-size:2rem;color:var(--teal);line-height:0;vertical-align:-.5rem;margin-right:4px}
+.reviewer{
+  font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--faint);font-weight:500;
+}
+.rating-block{
+  display:flex;align-items:center;gap:48px;
+  margin-bottom:60px;flex-wrap:wrap;
+}
+.rating-big{
+  font-family:var(--cond);font-weight:900;
+  font-size:7rem;line-height:1;
+  color:var(--white);letter-spacing:-.04em;
+}
+.rating-big span{color:var(--teal)}
+.rating-meta p{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.rating-meta p:first-child{color:var(--white);font-size:.85rem;margin-bottom:4px}
+
+/* ═══════════════════════════════════ CTA */
+.cta-section{
+  padding:120px 0;
+  position:relative;overflow:hidden;
+}
+.cta-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 100%,rgba(14,165,233,.08) 0%,transparent 65%);
+}
+.cta-border-top{
+  position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(to right,transparent,var(--teal-line) 30%,var(--teal-line) 70%,transparent);
+}
+.cta-inner{position:relative;z-index:1;text-align:center}
+.cta-tag{
+  font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--teal);font-weight:500;margin-bottom:24px;
+  display:block;
+}
+.cta-headline{
+  font-family:var(--cond);font-weight:900;
+  font-size:clamp(3rem,8vw,7rem);
+  text-transform:uppercase;line-height:.9;letter-spacing:-.02em;
+  margin-bottom:16px;
+}
+.cta-headline em{font-style:normal;color:var(--teal);display:block}
+.cta-sub{
+  font-size:1rem;color:var(--muted);max-width:420px;
+  margin:0 auto 48px;line-height:1.7;
+}
+.cta-phone-big{
+  display:block;
+  font-family:var(--cond);font-weight:900;
+  font-size:clamp(2rem,5vw,4rem);
+  color:var(--teal);letter-spacing:.02em;
+  margin-bottom:32px;
+  transition:color .2s;
+}
+.cta-phone-big:hover{color:#38bdf8}
+.cta-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-large{
+  font-family:var(--cond);font-weight:800;font-size:1rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:18px 40px;border-radius:4px;
+  transition:all .2s;cursor:pointer;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.btn-large-primary{
+  background:var(--teal);color:#000;border:2px solid var(--teal);
+}
+.btn-large-primary:hover{background:#38bdf8;border-color:#38bdf8;transform:translateY(-2px);box-shadow:0 20px 50px -10px rgba(14,165,233,.5)}
+.btn-large-ghost{
+  background:transparent;color:var(--white);
+  border:2px solid var(--line-strong);
+}
+.btn-large-ghost:hover{border-color:var(--teal);color:var(--teal)}
+
+/* ═══════════════════════════════════ FOOTER */
+footer{
+  background:var(--void);
+  border-top:1px solid var(--line);
+  padding:48px 0;
+}
+.footer-inner{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
+}
+.footer-logo{
+  font-family:var(--cond);font-weight:800;font-size:1.1rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;
+  color:var(--muted);
+}
+.footer-links{
+  display:flex;gap:24px;
+  font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);font-weight:500;
+}
+.footer-links a:hover{color:var(--teal)}
+.footer-credit{
+  font-size:.75rem;color:var(--faint);letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+/* ═══════════════════════════════════ RESPONSIVE */
+@media(max-width:900px){
+  .nav-cta .btn{display:none}
+  .split-inner{grid-template-columns:1fr}
+  .split-panel-right{border-left:none;border-top:1px solid var(--teal-line)}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .hero-badge{display:none}
+}
+@media(max-width:640px){
+  .wrap{padding:0 20px}
+  .nav-inner{padding:0 20px}
+  .process-grid{grid-template-columns:1fr}
+  .trust-item{padding:8px 16px;font-size:.68rem}
+  .hero-stat-row{gap:20px}
+  .h-stat-num{font-size:1.6rem}
+  .hero{padding-bottom:60px}
+  .section{padding:72px 0}
+  .split-panel{padding:40px 28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6 8 3 13 3 17a9 9 0 0018 0c0-4-3-9-9-15z"/></svg>
+      </div>
+      Pure Remediation
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+17132024815" class="nav-phone">(713) 202-4815</a>
+      <a href="tel:+17132024815" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.69A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        Call Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-left"></div>
+    <div class="hero-bg-right"></div>
+    <div class="hero-ripple"></div>
+    <div class="hero-ripple-2"></div>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="hero-badge">
+    <div class="badge-num">24/7</div>
+    <div class="badge-label">Emergency<br>Response</div>
+  </div>
+
+  <div class="wrap hero-content" style="padding-top:140px">
+    <div class="hero-tag">Houston, TX — Water Damage Specialists</div>
+    <h1>
+      <em>When Water</em>
+      <span>Destroys.</span>
+      We Restore.
+    </h1>
+    <p class="hero-sub">
+      Fast, professional water damage and mold remediation for Houston homes and businesses. We stop the damage, remove the threat, and bring your property back — completely.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+17132024815" class="btn-emergency">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.69A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        Call (713) 202-4815
+      </a>
+      <a href="#services" class="btn btn-ghost">See What We Fix</a>
+    </div>
+
+    <div class="hero-stat-row">
+      <div class="h-stat">
+        <div class="h-stat-num">4.6<span>★</span></div>
+        <div class="h-stat-label">Google Rating</div>
+      </div>
+      <div class="h-stat-divider"></div>
+      <div class="h-stat">
+        <div class="h-stat-num">24<span>/7</span></div>
+        <div class="h-stat-label">Emergency Line</div>
+      </div>
+      <div class="h-stat-divider"></div>
+      <div class="h-stat">
+        <div class="h-stat-num">100<span>%</span></div>
+        <div class="h-stat-label">Houston Local</div>
+      </div>
+      <div class="h-stat-divider"></div>
+      <div class="h-stat">
+        <div class="h-stat-num">Free</div>
+        <div class="h-stat-label">Inspections</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TRUST BAR ═══════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed & Insured
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Same-Day Response
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      Insurance Claim Assistance
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Residential & Commercial
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.69A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+      Free Estimates
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-label">What We Do</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:0">
+      <h2 class="section-title">Every Type<br>Of Damage.<br>One Call.</h2>
+      <p class="section-sub">From a burst pipe at 2am to a slow mold problem you finally noticed — we handle it all. Fast, clean, documented for insurance.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6 8 3 13 3 17a9 9 0 0018 0c0-4-3-9-9-15z"/></svg>
+        </div>
+        <div class="service-name">Water Damage Restoration</div>
+        <p class="service-desc">Burst pipes, flooding, appliance leaks, storm water. We extract standing water, dry the structure, and prevent secondary damage before it compounds.</p>
+        <span class="service-tag">Emergency Available</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M2.5 2v6h6V2h-6zm2 2h2v2h-2V4zm-2 7v6h6v-6h-6zm2 2h2v2h-2v-2zm7-11v6h6V2h-6zm2 2h2v2h-2V4zm-2 7v6h6v-6h-6zm2 2h2v2h-2v-2z"/></svg>
+        </div>
+        <div class="service-name">Mold Remediation</div>
+        <p class="service-desc">Visible mold, musty smells, or recent flooding — we find it, contain it, and remove it safely. Full testing and clearance documentation available.</p>
+        <span class="service-tag">Health & Safety Priority</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="service-name">Sewage & Biohazard Cleanup</div>
+        <p class="service-desc">Sewage backups, contaminated water intrusion. Proper containment, disinfection, and disposal — handled with full protective protocol so you don't have to.</p>
+        <span class="service-tag">Certified Technicians</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-name">Structural Drying & Repair</div>
+        <p class="service-desc">Industrial dehumidifiers and air movers, moisture monitoring, and structural repair. We don't stop at extraction — we restore to pre-loss condition.</p>
+        <span class="service-tag">Full Rebuild Available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SPLIT (problem / solution) ═══════ -->
+<div class="split">
+  <div class="wrap">
+    <div class="split-inner">
+      <div class="split-panel split-panel-left">
+        <div class="split-eyebrow before">Without Professional Help</div>
+        <div class="split-heading">What Happens<br>If You Wait</div>
+        <ul class="problem-list">
+          <li>Mold grows within 24–48 hours of moisture exposure</li>
+          <li>Structural wood begins warping and weakening</li>
+          <li>Hidden moisture spreads behind walls undetected</li>
+          <li>Insurance claims get denied for delayed reporting</li>
+          <li>Remediation costs multiply with every day of inaction</li>
+          <li>Air quality drops — health risks for your family</li>
+        </ul>
+      </div>
+      <div class="split-panel split-panel-right">
+        <div class="split-eyebrow after">With Pure Remediation</div>
+        <div class="split-heading">What We Do<br>Right Now</div>
+        <ul class="solution-list">
+          <li>On-site within hours — same day in most cases</li>
+          <li>Full moisture mapping — nothing hidden stays hidden</li>
+          <li>Containment set up immediately to stop spread</li>
+          <li>Insurance documentation prepared and submitted</li>
+          <li>Industrial drying equipment in place within 24 hours</li>
+          <li>Property returned to pre-loss condition, certified clean</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ PROCESS ═══════ -->
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="section-label">How It Works</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end">
+      <h2 class="section-title">Four Steps<br>From Crisis<br>To Clean.</h2>
+      <p class="section-sub">Most jobs are fully scoped and equipment-in within 24 hours of the first call. Here's what the process looks like from your side.</p>
+    </div>
+    <div class="process-grid" style="margin-top:60px">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">You Call. We Come.</div>
+        <p class="step-desc">Call anytime — day or night. We'll have a technician at your property same day in most cases. Free inspection, no commitment.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Assess & Contain</div>
+        <p class="step-desc">Full moisture mapping with professional equipment. We find what you can't see, contain it immediately, and scope the job before touching anything.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Extract & Dry</div>
+        <p class="step-desc">Industrial extractors, dehumidifiers, and air movers. We monitor drying progress daily until all moisture readings are back to safe levels.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Restore & Document</div>
+        <p class="step-desc">Structural repairs, mold clearance, final air quality check. Every step documented for your insurance claim — we handle the paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SOCIAL PROOF ═══════ -->
+<section class="proof" id="reviews">
+  <div class="wrap">
+    <div class="section-label">What Clients Say</div>
+    <div class="rating-block">
+      <div class="rating-big">4.6<span>★</span></div>
+      <div class="rating-meta">
+        <p>Google Reviews</p>
+        <p>Houston, TX</p>
+        <div class="proof-stars" style="margin-top:8px">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star" style="opacity:.5">★</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="proof-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-text">Came out within a few hours of my call. Found moisture in the walls I had no idea about. They walked me through everything and handled all the insurance paperwork. Huge relief.</p>
+        <div class="reviewer">Houston Homeowner</div>
+      </div>
+      <div class="review-card">
+        <div class="proof-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-text">Had a mold problem under the sink that had been spreading for months without us knowing. Pure Remediation found it, contained it, and had it cleared in days. Professional every step.</p>
+        <div class="reviewer">Sugar Land Resident</div>
+      </div>
+      <div class="review-card">
+        <div class="proof-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-text">Honest, fast, and fair pricing. Most companies I called wanted to upsell me on things I didn't need. These guys scoped the job right and stuck to it. I'd call them again in a heartbeat.</p>
+        <div class="reviewer">Houston Property Owner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section class="cta-section" id="contact">
+  <div class="cta-border-top"></div>
+  <div class="cta-bg"></div>
+  <div class="wrap">
+    <div class="cta-inner">
+      <span class="cta-tag">24/7 Emergency Response — Houston, TX</span>
+      <h2 class="cta-headline">
+        Don't Wait.
+        <em>Call Now.</em>
+      </h2>
+      <p class="cta-sub">Every hour without professional drying is mold growing, structure weakening, and your insurance claim getting harder to file. One call fixes that.</p>
+      <a href="tel:+17132024815" class="cta-phone-big">(713) 202-4815</a>
+      <div class="cta-actions">
+        <a href="tel:+17132024815" class="btn-large btn-large-primary">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.69A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          Emergency Call
+        </a>
+        <a href="sms:+17132024815" class="btn-large btn-large-ghost">Text Us Instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-mark" style="width:26px;height:26px">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:none;stroke:#000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><path d="M12 2C6 8 3 13 3 17a9 9 0 0018 0c0-4-3-9-9-15z"/></svg>
+        </div>
+        Pure Remediation
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="tel:+17132024815">Contact</a>
+      </div>
+      <div class="footer-credit">Houston, TX — (713) 202-4815</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
