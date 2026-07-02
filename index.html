@@ -54,42 +54,42 @@
     {
       "@type": "Question",
       "name": "Will my homeowner's insurance cover water damage?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sudden, accidental water damage — a burst pipe, a failed water heater, a storm intrusion — is covered by most homeowner policies. Gradual leaks and flooding from outside sources can be treated differently. We document the loss the way adjusters expect and can walk you through your coverage before you file." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Sudden, accidental water damage — a burst pipe, a failed water heater, a storm intrusion — is covered by most homeowner policies. Gradual leaks and outside flooding can differ. We document the loss the way adjusters expect." }
     },
     {
       "@type": "Question",
       "name": "How long does it take to dry out a house?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Most homes dry in three to five days, depending on how much water there was, which materials it reached, and how long it sat. We place industrial equipment the same day and take moisture readings daily until the structure reads dry — we don't pull equipment early." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Three to five days for most homes. Equipment goes in the same day, and we take moisture readings daily until the structure reads dry." }
     },
     {
       "@type": "Question",
       "name": "Is the mold dangerous — do I need to leave my home?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Mold can start growing within 24 to 48 hours of water intrusion. Small areas are usually safe to stay near while we contain and remove them; larger growth may call for temporary relocation. We contain the area first to stop spores from spreading, then verify with air-quality testing before sign-off." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Mold can start within 24 to 48 hours of water intrusion. Small areas are usually safe to stay near; larger growth may mean temporary relocation. We contain the area first, then verify with air-quality testing." }
     },
     {
       "@type": "Question",
       "name": "What does water damage restoration cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the type of damage, the size of the affected area, and how long it has been there. Our free estimate tool gives an honest range in about a minute, and we put a written quote in your hands after on-site instrument readings — no surprise costs." }
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the damage type, the size of the area, and how long it sat. The free estimate tool gives an honest range in a minute; the written quote comes after on-site readings." }
     },
     {
       "@type": "Question",
       "name": "Do you work directly with my insurance company?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with claims from all major carriers, prepare adjuster-ready documentation — photos, moisture logs, and line-item scope — and coordinate directly with your carrier so you are not stuck in the middle." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We prepare adjuster-ready documentation — photos, moisture logs, line-item scope — and coordinate directly with your carrier." }
     },
     {
       "@type": "Question",
       "name": "Does homeowner's insurance cover fire and smoke damage?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Fire is one of the most consistently covered perils in homeowner policies, and that coverage usually extends to smoke and soot damage and to the water used to put the fire out. A fire claim is often the largest claim a homeowner ever files, so documentation matters: we photograph and inventory the damage to structure and contents and prepare the line-item scope your adjuster will ask for." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Fire is one of the most consistently covered perils, and coverage usually extends to smoke, soot, and the water used to put the fire out. It's often the largest claim a homeowner ever files — we photograph, inventory, and build the line-item scope your adjuster will ask for." }
     },
     {
       "@type": "Question",
       "name": "The fire was small — why does the whole house smell like smoke?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Smoke doesn't stay where the fire was. It travels through ductwork and wall cavities and settles as acidic soot on surfaces far from the source, where it keeps corroding metal, glass, and finishes until it's removed. That's why even a small kitchen fire calls for a room-by-room assessment. Our fire and smoke work follows IICRC S700, the industry standard for fire and smoke damage restoration." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Smoke travels through ductwork and wall cavities and settles as acidic soot far from the fire, corroding surfaces until it's removed. Even a small fire calls for a room-by-room assessment. Our fire and smoke work follows IICRC S700." }
     },
     {
       "@type": "Question",
       "name": "Can smoke odor really be removed, or just covered up?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Removed — if it's done in the right order. Masking odor with fragrance fails within weeks. Following the IICRC S700 approach, we remove the charred and soot-laden materials that are the odor's source, clean the remaining surfaces, then treat the air and soft goods. If firefighting water soaked the structure, we dry that too, so a smoke problem doesn't become a mold problem." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Removed — if it's done in the right order. Following IICRC S700, we remove the soot-laden materials at the source, clean the surfaces, then treat the air. Masking with fragrance fails within weeks." }
     }
   ]
 }
@@ -513,6 +513,19 @@ main section { padding: 96px 32px; }
 .res-card b { display: block; font-size: .84rem; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }
 .res-card span { font-size: .74rem; color: var(--slate); line-height: 1.5; }
 
+/* blog */
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.blog-card {
+  background: var(--card); border: 1px solid var(--mist); border-radius: var(--r-lg);
+  padding: 28px 26px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+}
+.blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-2); border-color: rgba(10,102,178,.3); }
+.blog-card .bmeta { font-family: var(--mono); font-size: .62rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--hydro); }
+.blog-card h3 { font-size: 1.08rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.35; }
+.blog-card p { font-size: .875rem; color: var(--slate); line-height: 1.6; }
+.blog-card .more { margin-top: auto; padding-top: 6px; font-size: .85rem; font-weight: 700; color: var(--hydro); }
+
 /* footer */
 footer.site {
   background: var(--ink); color: rgba(231,238,245,.65); padding: 64px 32px 40px;
@@ -600,6 +613,7 @@ footer.site {
   .stat { border-left: none; border-top: 1px dashed rgba(255,255,255,.14); }
   .stat:nth-child(-n+2) { border-top: none; }
   .ba-grid, .rev-grid, .contact-grid, .ins-grid { grid-template-columns: 1fr; gap: 40px; }
+  .blog-grid { grid-template-columns: 1fr; }
   .rev-sticky { position: static; }
   .rev-cards { grid-template-columns: 1fr; }
   .res-grid { grid-template-columns: 1fr 1fr; }
@@ -657,6 +671,7 @@ footer.site {
         <li><a href="#insurance">Insurance</a></li>
         <li><a href="#estimate">Estimate</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#blog">Guides</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -675,7 +690,7 @@ footer.site {
     <div>
       <p class="eyebrow rv in">Houston &amp; Harris County · On-site in ~45 min · 24/7</p>
       <h1 class="h-display rv in rv-1">The water leaves.<br><span class="drown">Your home comes back.</span></h1>
-      <p class="hero-sub rv in rv-2">Pure Remediation handles extraction, structural drying, mold, and the insurance paperwork — one licensed Houston crew from the first call to the final clearance report.</p>
+      <p class="hero-sub rv in rv-2">One licensed Houston crew handles the water, the drying, the mold — and the insurance paperwork.</p>
       <div class="hero-actions rv in rv-2">
         <a class="btn-call" href="tel:+17132024815">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -736,50 +751,50 @@ footer.site {
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">What we do</p>
-      <h2>One crew, from standing water to clearance report</h2>
-      <p>No subcontractor roulette. The people who answer the phone are the people who show up.</p>
+      <h2>One crew, start to finish</h2>
+      <p>The people who answer the phone are the people who show up.</p>
     </div>
     <div class="svc-grid">
       <article class="svc rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Water damage restoration</h3>
-        <p>Burst pipes, slab leaks, appliance failures. We extract standing water, map moisture in the walls, and dry the structure — documented for your insurer.</p>
+        <p>Burst pipes, slab leaks, flooding. Extracted, dried, and documented for your insurer.</p>
         <span class="tag">Emergency</span>
       </article>
       <article class="svc rv rv-1">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Mold remediation</h3>
-        <p>Mold starts inside 48 hours of water intrusion. We contain the area, remove growth, treat the source, and verify with air-quality testing before sign-off.</p>
+        <p>Mold starts within 48 hours. We contain it, remove it, and verify with air testing.</p>
         <span class="tag">Contain · Remove · Verify</span>
       </article>
       <article class="svc rv rv-2">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Storm &amp; flood response</h3>
-        <p>When the bayous rise, we mobilize across Harris County — roof intrusion, slab flooding, hurricane damage. First in, first dry.</p>
+        <p>When the bayous rise, we mobilize across Harris County. First in, first dry.</p>
         <span class="tag">Harris County</span>
       </article>
       <article class="svc rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Insurance claim support</h3>
-        <p>Photo documentation, moisture logs, and scope reports in the exact format adjusters ask for. You file with confidence; we back it with evidence.</p>
+        <p>Photos, moisture logs, and scope reports in the format adjusters ask for.</p>
         <span class="tag">All carriers</span>
       </article>
       <article class="svc rv rv-1">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Structural drying</h3>
-        <p>Industrial dehumidifiers and air movers placed by the numbers — psychrometric readings, not guesswork — until walls and floors read dry.</p>
+        <p>Industrial equipment placed by the numbers, until walls and floors read dry.</p>
         <span class="tag">IICRC standards</span>
       </article>
       <article class="svc rv rv-2">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Clearance &amp; inspection</h3>
-        <p>Final moisture and air-quality testing with a written clearance report. The job isn't done when it looks done — it's done when it reads done.</p>
+        <p>Final testing and a written clearance report. Done means proven.</p>
         <span class="tag">Written proof</span>
       </article>
       <article class="svc svc-wide rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657zM9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Fire &amp; smoke restoration</h3>
-        <p>After the fire is out, acidic soot keeps corroding surfaces, smoke odor keeps spreading, and the water used to fight the fire starts its own damage. We handle soot removal, odor treatment, structural drying, and the claim documentation — one crew, one file. <a href="#fire" style="color:var(--signal-deep); font-weight:600; text-decoration:underline">How fire recovery works →</a></p>
+        <p>Soot, smoke odor, and firefighting water — one crew, one claim file. <a href="#fire" style="color:var(--signal-deep); font-weight:600; text-decoration:underline">How fire recovery works →</a></p>
         <span class="tag">Smoke · Soot · Odor</span>
       </article>
     </div>
@@ -824,7 +839,7 @@ footer.site {
     <div class="rv">
       <p class="eyebrow">The difference</p>
       <h2 class="sec-head" style="margin-bottom:14px; font-size:clamp(1.9rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.03em; line-height:1.12">What "restored" actually means</h2>
-      <p style="color:var(--slate); line-height:1.7; margin-bottom:26px">Drag the line. Restoration isn't cleanup — it's returning the structure to pre-loss condition, verified by instruments and put in writing.</p>
+      <p style="color:var(--slate); line-height:1.7; margin-bottom:26px">Drag the line. Restored means back to pre-loss condition — verified, and in writing.</p>
       <a class="btn-call" href="tel:+17132024815" style="font-size:.95rem; padding:15px 28px">Start your recovery</a>
     </div>
     <div class="rv rv-1">
@@ -848,8 +863,7 @@ footer.site {
     <div class="rv">
       <p class="eyebrow">Fire &amp; smoke restoration</p>
       <h2 style="font-size:clamp(1.9rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.03em; line-height:1.12; margin:14px 0 14px">The fire is out. The damage isn't.</h2>
-      <p style="color:var(--slate); line-height:1.7">Soot is acidic — it keeps etching metal, glass, and finishes for days after the flames stop. Smoke odor works into ducts, wall cavities, and soft goods far from where the fire burned. And the water that put the fire out starts the same clock as any flood. Fire recovery is three losses at once, and the order of operations decides what can be saved.</p>
-      <p style="color:var(--slate); line-height:1.7; margin-top:14px">It's also usually the largest insurance claim a homeowner ever files. We photograph and inventory the damage to structure and contents from the first visit, build the line-item scope your adjuster will ask for, and coordinate with your carrier — the same claims-first approach we bring to every water loss.</p>
+      <p style="color:var(--slate); line-height:1.7">Soot keeps corroding metal and glass. Smoke odor spreads through the ducts. Firefighting water starts a mold clock. Three losses at once — and usually the largest insurance claim you'll ever file. We handle all of it, and the claim.</p>
       <div style="margin-top:26px">
         <a class="btn-call" href="tel:+17132024815" style="font-size:.95rem; padding:15px 28px">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -861,15 +875,15 @@ footer.site {
       <div class="promise">
         <div class="row">
           <span class="ck"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><b>Smoke, soot &amp; odor removed at the source</b><span>Our work follows IICRC S700, the industry standard for fire and smoke damage restoration: remove the source, clean the surfaces, then treat the air — never mask it with fragrance.</span></div>
+          <div><b>Smoke, soot &amp; odor removed at the source</b><span>Our work follows IICRC S700: remove the source, clean the surfaces, treat the air — never mask it with fragrance.</span></div>
         </div>
         <div class="row">
           <span class="ck"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><b>Firefighting water dried like any water loss</b><span>Extraction, structural drying, and daily moisture readings until the structure reads dry — so a fire doesn't turn into a mold problem.</span></div>
+          <div><b>Firefighting water dried like any water loss</b><span>Extraction, drying, and daily moisture readings — so a fire doesn't become a mold problem.</span></div>
         </div>
         <div class="row">
           <span class="ck"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><b>A claim file your adjuster can work with</b><span>Photo inventory of structure and contents, line-item scope, and a documented cleaning record. You keep every document.</span></div>
+          <div><b>A claim file your adjuster can work with</b><span>Photo inventory, line-item scope, cleaning record. You keep every document.</span></div>
         </div>
       </div>
     </div>
@@ -882,7 +896,7 @@ footer.site {
     <div class="rv">
       <p class="eyebrow">Insurance &amp; credentials</p>
       <h2 style="font-size:clamp(1.9rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.03em; line-height:1.12; margin:14px 0 14px">We handle the part homeowners dread</h2>
-      <p style="color:var(--slate); line-height:1.7">Most people have never filed a water-damage claim before. We document the loss the way adjusters expect — photos, moisture logs, and line-item scope — and coordinate with your carrier directly, so the claim doesn't stall and you're not stuck in the middle.</p>
+      <p style="color:var(--slate); line-height:1.7">Most people have never filed a claim before. We document the loss the way adjusters expect and deal with your carrier directly — so the claim doesn't stall.</p>
       <p style="font-family:var(--mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--slate); margin-top:26px">We work with claims from all major carriers</p>
       <div class="carriers" role="list">
         <span class="carrier" role="listitem">State Farm</span>
@@ -920,7 +934,7 @@ footer.site {
     <div class="sec-head center">
       <p class="eyebrow">Free estimate</p>
       <h2>Know the ballpark before anyone knocks</h2>
-      <p>Five questions, an honest range, no sales call required. Adjusted on-site with instrument readings.</p>
+      <p>Five questions. An honest range. No sales call.</p>
     </div>
     <div class="est-shell">
       <div class="est-track"><div class="est-fill" id="est-fill"></div></div>
@@ -1030,7 +1044,7 @@ footer.site {
         <span class="num" data-count="4.6" data-dec="1">0</span>
         <span class="rev-stars" aria-label="4.6 out of 5 stars">★★★★★</span>
       </div>
-      <p class="rev-meta">9 reviews from Houston homeowners on Google. The ones here are shown word-for-word — click through and check.</p>
+      <p class="rev-meta">9 Google reviews, shown word-for-word. Click through and check.</p>
       <a class="g-link" href="https://www.google.com/maps/search/?api=1&query=Pure+Remediation+Houston&query_place_id=ChIJjXKwCtXdQIYRyuS9OLwxnL4" target="_blank" rel="noopener">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Read all reviews on Google
@@ -1067,7 +1081,6 @@ footer.site {
     <div class="sec-head center">
       <p class="eyebrow">Straight answers</p>
       <h2>The questions homeowners ask at 2 a.m.</h2>
-      <p>What to do first, what it costs, and how insurance really works — no runaround.</p>
     </div>
     <div class="faq-list rv">
       <div class="faq-item">
@@ -1076,36 +1089,67 @@ footer.site {
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Will my homeowner's insurance cover this?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Sudden, accidental water damage — a burst pipe, a failed water heater, a storm intrusion — is covered by most homeowner policies. Gradual leaks and outside flooding can be treated differently. We document the loss the way adjusters expect and can walk you through your coverage before you file.</p></div>
+        <div class="faq-a"><p>Sudden, accidental water damage — a burst pipe, a failed water heater, a storm intrusion — is covered by most homeowner policies. Gradual leaks and outside flooding can differ. We document the loss the way adjusters expect.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long does it take to dry out a house?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Most homes dry in three to five days, depending on how much water there was, which materials it reached, and how long it sat. We place industrial equipment the same day and take moisture readings daily until the structure reads dry — we don't pull equipment early.</p></div>
+        <div class="faq-a"><p>Three to five days for most homes. Equipment goes in the same day, and we take moisture readings daily until the structure reads dry.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is the mold dangerous — do I need to leave?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Mold can start growing within 24 to 48 hours of water intrusion. Small areas are usually safe to stay near while we contain and remove them; larger growth may call for temporary relocation. We contain the area first to stop spores from spreading, then verify with air-quality testing before sign-off.</p></div>
+        <div class="faq-a"><p>Mold can start within 24 to 48 hours of water intrusion. Small areas are usually safe to stay near; larger growth may mean temporary relocation. We contain the area first, then verify with air-quality testing.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does it cost?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>It depends on the type of damage, the size of the affected area, and how long it has been there. Our free estimate tool gives an honest range in about a minute, and we put a written quote in your hands after on-site instrument readings — no surprise costs.</p></div>
+        <div class="faq-a"><p>It depends on the damage type, the size of the area, and how long it sat. The free estimate tool gives an honest range in a minute; the written quote comes after on-site readings.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do you work directly with my insurance company?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Yes. We work with claims from all major carriers, prepare adjuster-ready documentation — photos, moisture logs, and line-item scope — and coordinate directly with your carrier so you're not stuck playing middleman.</p></div>
+        <div class="faq-a"><p>Yes. We prepare adjuster-ready documentation — photos, moisture logs, line-item scope — and coordinate directly with your carrier.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Does homeowner's insurance cover fire and smoke damage?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Fire is one of the most consistently covered perils in homeowner policies, and that coverage usually extends to smoke and soot damage and to the water used to put the fire out. A fire claim is often the largest claim a homeowner ever files, so documentation matters: we photograph and inventory the damage to structure and contents and prepare the line-item scope your adjuster will ask for.</p></div>
+        <div class="faq-a"><p>Fire is one of the most consistently covered perils, and coverage usually extends to smoke, soot, and the water used to put the fire out. It's often the largest claim a homeowner ever files — we photograph, inventory, and build the line-item scope your adjuster will ask for.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">The fire was small — why does the whole house smell like smoke?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Smoke doesn't stay where the fire was. It travels through ductwork and wall cavities and settles as acidic soot on surfaces far from the source, where it keeps corroding metal, glass, and finishes until it's removed. That's why even a small kitchen fire calls for a room-by-room assessment. Our fire and smoke work follows IICRC S700, the industry standard for fire and smoke damage restoration.</p></div>
+        <div class="faq-a"><p>Smoke travels through ductwork and wall cavities and settles as acidic soot far from the fire, corroding surfaces until it's removed. Even a small fire calls for a room-by-room assessment. Our fire and smoke work follows IICRC S700.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Can smoke odor really be removed, or just covered up?<span class="pm" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Removed — if it's done in the right order. Masking odor with fragrance fails within weeks. Following the IICRC S700 approach, we remove the charred and soot-laden materials that are the odor's source, clean the remaining surfaces, then treat the air and soft goods. If firefighting water soaked the structure, we dry that too, so a smoke problem doesn't become a mold problem.</p></div>
+        <div class="faq-a"><p>Removed — if it's done in the right order. Following IICRC S700, we remove the soot-laden materials at the source, clean the surfaces, then treat the air. Masking with fragrance fails within weeks.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG / GUIDES -->
+<section id="blog" class="ba-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Homeowner guides</p>
+      <h2>Know what you're dealing with</h2>
+      <p>Short, honest guides — written for homeowners, not adjusters.</p>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card rv" href="blog/first-24-hours-water-damage.html">
+        <span class="bmeta">Water damage · 4 min read</span>
+        <h3>The first 24 hours after water damage: what to do, in order</h3>
+        <p>The steps that protect your home and your insurance claim — and the two mistakes that cost homeowners the most.</p>
+        <span class="more">Read the guide →</span>
+      </a>
+      <a class="blog-card rv rv-1" href="blog/does-insurance-cover-water-damage-texas.html">
+        <span class="bmeta">Insurance · 5 min read</span>
+        <h3>Does homeowner's insurance cover water damage in Texas?</h3>
+        <p>Sudden vs. gradual, why flood is a separate policy, and how to document a loss so the claim doesn't stall.</p>
+        <span class="more">Read the guide →</span>
+      </a>
+      <a class="blog-card rv rv-2" href="blog/hidden-mold-after-leak.html">
+        <span class="bmeta">Mold · 4 min read</span>
+        <h3>5 signs of hidden mold after a leak</h3>
+        <p>Mold rarely grows where you can see it. The smells, stains, and symptoms that mean it's time to look deeper.</p>
+        <span class="more">Read the guide →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1144,7 +1188,7 @@ footer.site {
     <div class="sec-head">
       <p class="eyebrow">Homeowner resources</p>
       <h2>The references we work from</h2>
-      <p>Don't take a contractor's word for it — these are the public standards and tools we point every Houston homeowner to.</p>
+      <p>Public standards and tools — don't take a contractor's word for it.</p>
     </div>
     <div class="res-grid">
       <a class="res-card rv" href="https://www.epa.gov/mold" target="_blank" rel="noopener">
@@ -1199,6 +1243,7 @@ footer.site {
         <li><a href="#insurance">Insurance &amp; claims</a></li>
         <li><a href="#estimate">Free estimate</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#blog">Homeowner guides</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
